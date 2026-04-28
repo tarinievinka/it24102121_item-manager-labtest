@@ -27,6 +27,12 @@ const itemSchema = new mongoose.Schema(
       default: "",
       trim: true,
     },
+    modelNumber: {
+      type: Number,
+      default: 0,
+      trim: true,
+    },
+
   },
   { timestamps: true }
 );

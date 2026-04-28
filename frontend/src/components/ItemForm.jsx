@@ -8,6 +8,7 @@ function ItemForm({ initialValues, onSubmit, submitText }) {
       price: "",
       description: "",
       imageUrl: "",
+      modelNumber: 0,
     }
   );
 
@@ -21,6 +22,7 @@ function ItemForm({ initialValues, onSubmit, submitText }) {
     onSubmit({
       ...formData,
       price: Number(formData.price),
+      modelNumber: Number(formData.modelNumber),
     });
   };
 
@@ -55,6 +57,13 @@ function ItemForm({ initialValues, onSubmit, submitText }) {
       <label>Image URL</label>
       <input name="imageUrl" value={formData.imageUrl} onChange={handleChange} />
 
+      <label>Model Number</label>
+      <input
+        type="number"
+        name="modelNumber"
+        value={formData.modelNumber}
+        onChange={handleChange}
+      />
       <button className="btn primary" type="submit">{submitText}</button>
     </form>
   );
